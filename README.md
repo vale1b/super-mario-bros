@@ -1,0 +1,7 @@
+Super Mario Bros es un iconico videojuego de plataformas desarrollado y publicado por Nintendo en 1985. Es uno de los titulos mas influyentes y reconocidos en la historia de los videojuegos. El juego sigue las aventuras de Mario, un fontanero italiano, y su hermano Luigi, mientras intentan rescatar a la Princesa Peach del malvado Rey Bowser.
+
+El juego se desarrolla en el Reino Champiñon, un mundo lleno de niveles llenos de enemigos como Goombas, Koopas y plantas pirañas, que Mario debe superar. Los jugadores guian a Mario a traves de diferentes mundos, saltando entre plataformas, recogiendo monedas, y utilizando potenciadores como el Super Champiñon, la Flor de Fuego y la Estrella de la Invencibilidad. Estos elementos permiten a Mario crecer, lanzar bolas de fuego o volverse invulnerable temporalmente.
+
+Cada nivel termina con un castillo, donde Mario enfrenta a uno de los secuaces de Bowser hasta llegar al enfrentamiento final. El objetivo es derrotar a Bowser y salvar a la princesa, trayendo paz al Reino Champiñon.
+
+La jugabilidad simple pero adictiva, junto con su diseño innovador, hicieron de Super Mario Bros un exito rotundo, y sento las bases para el desarrollo de futuros juegos de plataformas. Su legado perdura hasta hoy, siendo una referencia fundamental en la cultura de los videojuegos.
