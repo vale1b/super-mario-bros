@@ -6,6 +6,13 @@ const config = {
     height: 244,
     backgroundColor: "#049cd8",
     parent: "game",
+    physics: {
+        default: 'arcade',
+        arcade: {
+            gravity: { y: 300 },
+            debug: false
+        }
+    },
     scene: {
         preload, // se ejecuta para precargar recursos
         create, // se ejecuta cuando el juego comienza
@@ -39,11 +46,22 @@ function create () {
         .setOrigin(0, 0)
         .setScale(0.15)
 
-    this.add.tileSprite(0, config.height - 32, config.width, 32, 'floorbricks')
-        .setOrigin(0, 0)
+    this.floor = this.physics.add.staticGroup()
+
+    this.floor 
+        .create(0, config.height - 16, 'floorbricks')
+        .setOrigin(0, 0.5)
+        .refreshBody()
     
-    this.mario = this.add.sprite(50, 210, 'mario')
+    this.floor
+        .create(150, config.height - 16, 'floorbricks')
+        .setOrigin(0, 0.5)
+        .refreshBody()
+    
+    this.mario = this.physics.add.sprite(50, 210, 'mario')
         .setOrigin(0, 1)
+
+    this.physics.add.collider(this.mario, this.floor)
 
     this.anims.create({
         key: 'mario-walk',            
