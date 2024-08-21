@@ -45,13 +45,44 @@ function create () {
     this.mario = this.add.sprite(50, 210, 'mario')
         .setOrigin(0, 1)
 
+    this.anims.create({
+        key: 'mario-walk',            
+        frames: this.anims.generateFrameNumbers(
+            'mario',
+            { start: 1, end: 3 }
+        ),
+        frameRate: 12,
+        repeat: -1
+    })
+
+    this.anims.create({
+        key: 'mario-idle',
+        frames: [{ key: 'mario', frame: 0 }]
+    })
+
+    this.anims.create({
+        key: 'mario-jump',
+        frames: [{ key: 'mario', frame: 5 }]
+    })
+
     this.keys = this.input.keyboard.createCursorKeys()
 }
 
 function update () {
     if (this.keys.left.isDown) {
+        this.mario.anims.play('mario-walk', true)
         this.mario.x -= 2
+        this.mario.flipX = true
     } else if (this.keys.right.isDown) {
+        this.mario.anims.play('mario-walk', true)
         this.mario.x += 2
+        this.mario.flipX = false
+    } else {
+        this.mario.anims.play('mario-idle', true)
+    }
+
+    if (this.keys.up.isDown) {
+        this.mario.y -= 5
+        this.mario.anims.play('mario-jump', true)
     }
 }
