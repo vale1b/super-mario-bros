@@ -60,8 +60,14 @@ function create () {
     
     this.mario = this.physics.add.sprite(50, 210, 'mario')
         .setOrigin(0, 1)
+        .setCollideWorldBounds(true)
+        .setGravityY(300)
 
+    this.physics.world.setBounds(0, 0, 2000, config.height)
     this.physics.add.collider(this.mario, this.floor)
+
+    this.camera.main.setBounds(0, 0, 2000, config.height)
+    this.camera.main.startFollow(this.mario)
 
     this.anims.create({
         key: 'mario-walk',            
@@ -99,8 +105,8 @@ function update () {
         this.mario.anims.play('mario-idle', true)
     }
 
-    if (this.keys.up.isDown) {
-        this.mario.y -= 5
+    if (this.keys.up.isDown && this.mario.body.touching.down) {
+        this.mario.setVelocityY(-300)
         this.mario.anims.play('mario-jump', true)
     }
 }
